@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        let phoneBooks = [];
+        function addContact(name, phone, email) {
+            let contact = {Name: name, Phone: phone, Email: email};
+            phoneBooks.push(contact);
+        }
+        function displayContacts() {
+            console.log("Danh bạ điện thoại:");
+            if (phoneBooks.length === 0) {
+                console.log("Danh bạ trống.");
+            } else {
+                phoneBooks.forEach((contact, index) => {
+                    console.log(`Liên hệ ${index + 1}:`);
+                    console.log(`Tên: ${contact.Name}`);
+                    console.log(`Số điện thoại: ${contact.Phone}`);
+                    console.log(`Email: ${contact.Email}`);
+                    console.log();
+                });
+            }
+        }
+        addContact("a", "0", "a@a.com");
+        addContact("b", "0", "b@b.com");
+
+        displayContacts();
+
+    </script>
+</body>
+</html>
